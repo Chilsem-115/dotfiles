@@ -1,0 +1,62 @@
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css);
+
+:root {
+	--transparencycolor:			40, 40, 40;
+	--transparencyalpha:			0.9;
+	--messagetransparency:			0.5;
+	--guildchanneltransparency:		0.15;
+	--chatinputtransparency:		0.0;
+	--memberlisttransparency:		0.0;
+	--accentcolor:				95, 133, 115;
+	
+	
+	--background:				url(https://w.wallhaven.cc/full/6d/wallhaven-6d9mwq.png);
+	--backgroundposition:			center;
+	--backgroundsize:			cover;
+	--backgroundblur:			0;
+	
+	--popout:					var(--background);
+	--popoutposition:			var(--backgroundposition);
+	--popoutsize:				var(--backgroundsize);
+	--popoutblur:				var(--backgroundblur);
+	
+	--backdrop:				rgba(0, 0, 0, 0.85);
+	--backdropposition:			center;
+	--backdropsize:				cover;
+	--backdropblur:				0;
+	
+	
+	--font_v:				var(--font_s, var(--font));
+	--textshadow_v:				var(--textshadow_s, var(--textshadow));
+	--settingsicons_v:			var(--settingsicons_s, var(--settingsicons));
+	
+	--background_v:				var(--background_s, var(--background));
+	--backgroundposition_v:			var(--backgroundposition_s, var(--backgroundposition));
+	--backgroundsize_v:			var(--backgroundsize_s, var(--backgroundsize));
+	--backgroundblur_v:			calc(1px * var(--backgroundblur_s, var(--backgroundblur)));
+	
+	--accentcolor2:				var(--accentcolor_v);
+	--mentioncolor:				var(--accentcolor_v);
+	--linkcolor:				var(--accentcolor_v);
+}
+
+
+#app-mount .bg__960e4,
+#app-mount .contentRegion__23e6b {
+	background: transparent;
+}
+
+body:has(#app-mount)::before,
+body:has(#app-mount)::after {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+	z-index: -1;
+}
+body:has(#app-mount)::before {
+	background: var(--background_v) var(--backgroundposition_v)/var(--backgroundsize_v);
+}
